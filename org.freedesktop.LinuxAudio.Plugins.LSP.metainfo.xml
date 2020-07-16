@@ -49,6 +49,8 @@
       <li>Trigger M / S</li>
       <li>Delay Compensator M / S</li>
       <li>Delay Compensator x2 Stereo</li>
+      <li>Loudness Compensator M / S (NEW in 1.1.24)</li>
+      <li>Surge Filter M / S (NEW in 1.1.24)</li>
     </ul>
   </description>
   <url type="homepage">https://lsp-plug.in/</url>
@@ -56,6 +58,36 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2020-07-16" version="1.1.24">
+      <description>
+        <p>New release of LSP Pluigins is available with the following changes:</p>
+        <ul>
+          <li><b>Implemented Loudness Compensator plugin series (Mono and Stereo).</b></li>
+          <li><b>Implemented Surge Filter plugin series (Mono and Stereo) for protecting audio chain from possible pops on playback start/stop events.</b></li>
+          <li>Significant changes the Limiter Plugin series, may be partially incompatible with hosts/wrappers:
+          <ul>
+            <li>Removed 'Classic' and 'Mixed' modes since these modes do not give effective results.</li>
+            <li>Introduced Automatic Level Regulation (ALR) feature enabled by default.</li>
+          </ul>
+          </li>
+          <li>Added possibility to dump internal state of plugin to file.</li>
+          <li>Several plugins now support dumping of internal state.</li>
+          <li>Added support of loading Hydrogen drumkits by the Multisampler plugin series.</li>
+          <li>Added 'Squared Cosine' and 'Cubic Hermite Spline' windows to Spectrum Analyzer.</li>
+          <li>Fixed bug that caused Spectrum Analyzer to ignore window selection.</li>
+          <li>Fixed bug in AVX-optimized sidechaining funcion that could cause invalid behaviour of plugins that use external/internal sidechain for processing.</li>
+          <li>Implemented back-buffering of the window surface, all UI controls now don't glitch on edit.</li>
+          <li>Refactored and simplified LV2 parameter transport between UI and plugin code.</li>
+          <li>VST plugins now provide possibility to save and load presets and do not crash Host.</li>
+          <li>Added support of lv2:StateChanged extension which properly works with Ardour 6.0.145 and higher.</li>
+          <li>Fixed improper behaviour of VST controls under REAPER host (and possible other VST hosts).</li>
+          <li>Updated metadata for dynamic processors to better match the UI.</li>
+          <li>Now all lv2:Atom ports that do not provide MIDI message transfer are marked as lv2:connectionOptional.</li>
+          <li>Exported plugin configuration now contains information about original package version.</li>
+        </ul>
+      </description>
+      <url>https://github.com/sadko4u/lsp-plugins/releases/tag/lsp-plugins-1.1.24</url>
+    </release>
     <release date="2020-05-30" version="1.1.22" />
     <release date="2020-05-16" version="1.1.21" />
   </releases>
