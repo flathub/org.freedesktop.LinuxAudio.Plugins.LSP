@@ -11,6 +11,7 @@
       <li>Limiter M / S</li>
       <li>Dynamic processor LR / MS / M / S</li>
       <li>Expander LR / MS / M / S</li>
+      <li>Crossover x8 LR / MS / M / S</li>
       <li>Gate LR / MS / M / S</li>
       <li>Graphic Equalizer x16 and x32 LR / MS / M / S</li>
       <li>Impulse Response M / S</li>
@@ -58,9 +59,30 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2020-09-15" version="1.1.26">
+      <description>
+        <ul>
+          <li>Implemented Crossover Plugin series.</li>
+          <li>Fixed phase mismatch between channels in the
+          oversampling mode of limiter (contributed by Hector
+          Martin).</li>
+          <li>Fixed bug in convolver module which could perform
+          improper tail convolution (reported by Robin Gareus).</li>
+          <li>Affected plugins: Impulse Responses, Impulse Reverb,
+          Room Builder.</li>
+          <li>Fixed small memory leakage in multiband plugins
+          (Compressor, Gate, Expander) related to usage of Inline
+          Display feature.</li>
+          <li>Added support of pg:mainInput and pg:mainOutput LV2
+          properties in TTL files for all plugins.</li>
+          <li>Updated all C++ headers and source files to match the
+          LGPL3+ license headers.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-07-16" version="1.1.24">
       <description>
-        <p>New release of LSP Pluigins is available with the following changes:</p>
+        <p>New release of LSP Plugins is available with the following changes:</p>
         <ul>
           <li><b>Implemented Loudness Compensator plugin series (Mono and Stereo).</b></li>
           <li><b>Implemented Surge Filter plugin series (Mono and Stereo) for protecting audio chain from possible pops on playback start/stop events.</b></li>
