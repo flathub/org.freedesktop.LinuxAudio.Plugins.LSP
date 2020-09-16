@@ -67,9 +67,9 @@
           oversampling mode of limiter (contributed by Hector
           Martin).</li>
           <li>Fixed bug in convolver module which could perform
-          improper tail convolution (reported by Robin Gareus).</li>
-          <li>Affected plugins: Impulse Responses, Impulse Reverb,
-          Room Builder.</li>
+          improper tail convolution (reported by Robin
+          Gareus). Affected plugins: Impulse Responses, Impulse
+          Reverb, Room Builder.</li>
           <li>Fixed small memory leakage in multiband plugins
           (Compressor, Gate, Expander) related to usage of Inline
           Display feature.</li>
