@@ -18,6 +18,7 @@
       <li>Impulse Reverb M / S</li>
       <li>Sampler M / S</li>
       <li>Compressor LR / MS / M / S</li>
+      <li>Artistic M / S</li>
       <li>Latency Meter</li>
       <li>Multiband expander x8 LR / MS / M / S</li>
       <li>Multiband gate x8 LR / MS / M / S</li>
@@ -59,6 +60,47 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2020-12-20" version="1.1.28">
+      <description>
+        <ul>
+          <li>Implemented Artistic Delay plugin.</li>
+          <li>Added delay time and phase inversion for each band of
+          the crossover plugin.</li>
+          <li>MIDI octave numbering now starts with "-1", previously
+          it started with "-2".</li>
+          <li>Added automatic scanning of installed Hydrogen drumkits
+          to the Multisampler plugin series and possibility to load
+          them by single click in the main menu.</li>
+          <li>Added sample reversal feature to the
+          Sampler/Multisampler/Trigger plugin series.</li>
+          <li>Added possibility to change the note number in
+          Sampler/Multisampler/Trigger plugin series by scrolling
+          mouse wheel over the note number indicator or performing
+          mouse double click on it.</li>
+          <li>Added possibility to use relative paths in file
+          configurations.</li>
+          <li>Added 'Plugin Manual' menu item to show the
+          documentation to plugin in the browser.</li>
+          <li>Added 'UI Manual' menu item to show the documentation to
+          UI in the browser.</li>
+          <li>Added tutorial of using hydrogen drumkits in the
+          Multisampler plugin series - contributed by chrisanthropic @
+          github.</li>
+          <li>Updated french translations - contributed by Olivier
+          Humbert.</li>
+          <li>Plugins now can be built with Clang C++ compiler version
+          10+.</li>
+          <li>Refactored ipc::Process for better work with vfork()
+          system call.</li>
+          <li>Fixed bug in improper RGB -> HSL conversion for UI.</li>
+          <li>Fixed regression in led indication for the Compensation
+          Delay plugin series.</li>
+          <li>Fixed drag&amp;drop regression after code refactoring.</li>
+          <li>Fixed bug in Fraction widget related to nominator
+          drop-down list values.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-09-15" version="1.1.26">
       <description>
         <ul>
