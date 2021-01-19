@@ -60,6 +60,35 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2021-01-18" version="1.1.29">
+      <description>
+        <ul>
+          <li>Fixed latency computation error for FIR and FFT modes of
+          the filter.</li>
+          <li>Optimize FIR and FFT equalizers to use fastconv_
+          routines instead of FFT.</li>
+          <li>Implemented SPM mode for Parameteric and Graphic
+          Equalizer plugin series.</li>
+          <li>Fixed improper VST call handling for several calls.</li>
+          <li>Several typo fixes in documentation (contributed by
+          Olivier Humbert).</li>
+          <li>Fixed improper output MIDI event sorting for all
+          plugins.</li>
+          <li>Channels of spectrum analyzer are now synchronized.</li>
+          <li>Fixed regression related to loading built-in file
+          resources.</li>
+          <li>Added extra button to hide/show equalizer section for
+          Impulse Responses and Impulse Reverb plugin series.</li>
+          <li>Updated OBJ file parsing for support less strict file
+          format.</li>
+          <li>Fixed improper behaviour of File Open Dialog widget
+          related to file name input.</li>
+          <li>Art Delay plugin settings changed: by default
+          multipliers are now set to 1, BPM multiplier allows now to
+          step with 0.5 values allowing to set dotted notes.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2020-12-20" version="1.1.28">
       <description>
         <ul>
