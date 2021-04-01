@@ -24,6 +24,7 @@
       <li>Multiband gate x8 LR / MS / M / S</li>
       <li>Multiband cmpressor x8 LR / MS / M / S</li>
       <li>Oscillator Mono</li>
+      <li>Oscilloscope x1, x2 and x4.</li>
       <li>Parametric Equalizer x16 LR / MS / M / S</li>
       <li>Parametric Equalizer x32 LR / MS / M / S</li>
       <li>Phase detector</li>
@@ -60,6 +61,40 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2021-03-31" version="1.1.30">
+      <description>
+        <ul>
+          <li>Implemented Oscilloscope plugin series: x1, x2 and
+          x4. UX design by Boris Gotsulenko.</li>
+          <li>Added data streaming port support to plugin framework.</li>
+          <li>Added strobe feature to mesh primitives that allows to
+          draw multiple streamed meshes together.</li>
+          <li>Implemented 4-lobe Lanczos oversampling DSP functions
+          for i586 architecture.</li>
+          <li>Implemented 4-lobe Lanczos oversampling DSP functions
+          for x86_64 architecture.</li>
+          <li>Implemented 4-lobe Lanczos oversampling DSP functions
+          for 32-bit ARM architecture.</li>
+          <li>Implemented 4-lobe Lanczos oversampling DSP functions
+          for 64-bit ARM architecture.</li>
+          <li>Minor bugfixes in the core library.</li>
+          <li>Fixed bug with character set encoding for several
+          systems with limited iconv.</li>
+          <li>Fixed latency compensation issue that happened for the
+          'Bypass' switch/automation.</li>
+          <li>Implemented additional 'Boosting' mode for the
+          single-band compressor plugin series.</li>
+          <li>Implemented additional 'Boosting' mode for the
+          multiband-band compressor plugin series.</li>
+          <li>Updated french translations (contributed by Olivier
+          Humbert).</li>
+          <li>Updated italian translations by Stefano Tronci.</li>
+          <li>Desktop icon installation moved to a separate
+          'install_xdg' icon to prevent LSP icon flooding for several
+          systems which don't support XDG standard.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-01-18" version="1.1.29">
       <description>
         <ul>
