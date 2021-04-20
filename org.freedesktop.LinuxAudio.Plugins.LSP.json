@@ -53,7 +53,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/sadko4u/lsp-plugins.git",
-                    "tag": "lsp-plusings-1.1.26"
+                    "tag": "lsp-plugins-1.1.26"
                 },
                 {
                     "type": "file",
