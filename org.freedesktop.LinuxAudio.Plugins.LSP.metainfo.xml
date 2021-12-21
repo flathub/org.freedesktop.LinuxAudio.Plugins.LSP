@@ -61,6 +61,27 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2021-12-20" version="1.1.31">
+      <description>
+        <ul>
+          <li>Fixed X11 error handling routine that could crash under certain conditions.</li>
+          <li>Better support for musl libc (contributed by Artur Sinila).</li>
+          <li>Added support of VERBOSE parameter for build system
+          (contributed by Artur Sinila).</li>
+          <li>Fixed possible system crash in profiler plugin.</li>
+          <li>Updated LV2 TTL generator, now instrument plugins are
+          better compatible with Ardour DAW.</li>
+          <li>Updated french translation (contributed by wargreen at
+          Github and Olivier Humbert).</li>
+          <li>Migrated hyperlinks from HTTP to HTTPS protocol
+          (contributed by Bruno Vernay).</li>
+          <li>Added support of build for 32-bit and 64-bit RISC-V
+          architecture (contributed by Xeonacid at GitHub).</li>
+          <li>Fixed window issue for the Fluxbox window manager.</li>
+          <li>Fixed build for ARMv8 architecture (contributed by Marek Szuba).</li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-03-31" version="1.1.30">
       <description>
         <ul>
