@@ -11,49 +11,41 @@
         "prefix": "/app/extensions/Plugins/LSP"
     },
     "cleanup": [
-        "/lib/lv2"
+        "/include",
+        "/lib/liblsp-*.so",
+        "/lib/lv2",
+        "/lib/pkgconfig",
+        "*.a"
     ],
     "modules": [
         "shared-modules/linux-audio/lv2.json",
         {
             "name": "lsp",
             "no-autogen": true,
-            "build-options": {
-                "arch": {
-                    "arm": {
-                        "make-args": [
-                            "BUILD_PROFILE=armv7a"
-                        ]
-                    },
-                    "aarch64": {
-                        "make-args": [
-                            "BUILD_PROFILE=aarch64"
-                        ]
-                    }
-                },
-                "cppflags": "`pkg-config --cflags lv2`",
-                "env": {
-                    "PREFIX": "${FLATPAK_DEST}",
-                    "LIB_PATH": "${FLATPAK_DEST}",
-                    "BUILD_MODULES": "ladspa lv2 vst"
-                }
-            },
-            "no-make-install": true,
+            "make-args": [
+                "config",
+                "INCLUDE=-I/app/extensions/Plugins/LSP/include",
+                "PREFIX=/app/extensions/Plugins/LSP",
+                "FEATURES=vst2 ladspa lv2"
+            ],
             "post-install": [
-                "make install_ladspa install_lv2 install_vst",
-                "strip ${FLATPAK_DEST}/ladspa/*.so",
+                "strip ${FLATPAK_DEST}/lib/ladspa/*.so",
+                "install -d ${FLATPAK_DEST}/lv2",
+                "mv ${FLATPAK_DEST}/lib/lv2/lsp-*.lv2 ${FLATPAK_DEST}/lv2/",
                 "strip ${FLATPAK_DEST}/lv2/*.lv2/*.so",
-                "ln -sf vst $FLATPAK_DEST/lxvst",
-                "strip ${FLATPAK_DEST}/vst/*/*.so",
+                "strip ${FLATPAK_DEST}/lib/vst/*/*.so",
+                "ln -sf lib/ladspa ${FLATPAK_DEST}/ladspa",
+                "ln -sf lib/vst ${FLATPAK_DEST}/vst",
+                "ln -sf vst ${FLATPAK_DEST}/lxvst",
                 "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.LSP.metainfo.xml",
                 "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.LSP --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.LinuxAudio.Plugins.LSP",
-                "install -Dm644 -t $FLATPAK_DEST/share/licenses/lsp LICENSE.txt"
+                "install -Dm644 -t $FLATPAK_DEST/share/licenses/lsp COPYING COPYING.LESSER"
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/sadko4u/lsp-plugins.git",
-                    "tag": "1.1.31"
+                    "type": "archive",
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.0/lsp-plugins-src-1.2.0.tar.gz",
+                    "sha256": "af75332bf996dd572ae1a8e6ea3537d02cc95c5a05b7ee04597afd068800e977"
                 },
                 {
                     "type": "file",

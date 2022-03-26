@@ -61,6 +61,22 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2022-03-25" version="1.2.0">
+      <description>
+        <ul>
+          <li>Decomposition of core modules into submodules.</li>
+          <li>Implemented multiple visual themes for the plugins.</li>
+          <li>Added possibility to change visual themes in runtime.</li>
+          <li>Added headless support for JACK plugins.</li>
+          <li>Fixed delay compensation issue for Dry/Wet balance for single-banded
+          dynamic plugin series (Compressor/Gate/Expander/Dynamic Processor).</li>
+          <li>Add support of LV2UI:scaleFactor extension</li>
+          <li>Implemented 'Reset to default' button.</li>
+          <li>Added support of building under LoongArch32 and LoongArch64 architectures.</li>
+          <li>Added support of building under 32-bit and 64-bit RISC-V architectures.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2021-12-20" version="1.1.31">
       <description>
         <ul>
