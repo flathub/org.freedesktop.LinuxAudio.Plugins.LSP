@@ -2,7 +2,7 @@
     "id": "org.freedesktop.LinuxAudio.Plugins.LSP",
     "branch": "21.08",
     "runtime": "org.freedesktop.LinuxAudio.BaseExtension",
-    "runtime-version": "21.08",
+    "runtime-version": "stable",
     "sdk": "org.freedesktop.Sdk//21.08",
     "build-extension": true,
     "appstream-compose": false,
@@ -22,6 +22,9 @@
         {
             "name": "lsp",
             "no-autogen": true,
+            "build-options": {
+                "cxxflags": "-fpermissive"
+            },
             "make-args": [
                 "config",
                 "INCLUDE=-I/app/extensions/Plugins/LSP/include",
@@ -44,8 +47,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.1/lsp-plugins-src-1.2.1.tar.gz",
-                    "sha256": "c0789b6496eb832eedd33dab4437b5154006dfc056fdd474260a0a5566029fad"
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.2/lsp-plugins-src-1.2.2.tar.gz",
+                    "sha256": "a886a40d636cf1f426970fd51f04c44f62e622f23ee88eb32bcf1b9ac585e152"
                 },
                 {
                     "type": "file",

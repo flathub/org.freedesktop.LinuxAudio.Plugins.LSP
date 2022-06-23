@@ -61,6 +61,11 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2022-06-22" version="1.2.2">
+      <description>
+        <p>Implemented Multiband Dynamic Processor plugin series.</p>
+      </description>
+    </release>
     <release date="2022-05-04" version="1.2.1">
       <description>
         <ul>
