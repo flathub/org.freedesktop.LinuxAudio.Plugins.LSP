@@ -1,9 +1,9 @@
 {
     "id": "org.freedesktop.LinuxAudio.Plugins.LSP",
-    "branch": "21.08",
+    "branch": "22.08",
     "runtime": "org.freedesktop.LinuxAudio.BaseExtension",
     "runtime-version": "stable",
-    "sdk": "org.freedesktop.Sdk//21.08",
+    "sdk": "org.freedesktop.Sdk//22.08",
     "build-extension": true,
     "appstream-compose": false,
     "build-options": {
@@ -39,7 +39,6 @@
                 "strip ${FLATPAK_DEST}/lib/vst/*/*.so",
                 "ln -sf lib/ladspa ${FLATPAK_DEST}/ladspa",
                 "ln -sf lib/vst ${FLATPAK_DEST}/vst",
-                "ln -sf vst ${FLATPAK_DEST}/lxvst",
                 "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.LSP.metainfo.xml",
                 "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.LSP --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.LinuxAudio.Plugins.LSP",
                 "install -Dm644 -t $FLATPAK_DEST/share/licenses/lsp COPYING COPYING.LESSER"
