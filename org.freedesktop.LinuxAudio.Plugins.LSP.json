@@ -22,9 +22,6 @@
         {
             "name": "lsp",
             "no-autogen": true,
-            "build-options": {
-                "cxxflags": "-fpermissive"
-            },
             "make-args": [
                 "config",
                 "INCLUDE=-I/app/extensions/Plugins/LSP/include",
@@ -46,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.2/lsp-plugins-src-1.2.2.tar.gz",
-                    "sha256": "a886a40d636cf1f426970fd51f04c44f62e622f23ee88eb32bcf1b9ac585e152"
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.3/lsp-plugins-src-1.2.3.tar.gz",
+                    "sha256": "7a3f2ddf1936f552c930ed65bd7bb35250f4d1a97c4d390f2cbf33eb67e64f2b"
                 },
                 {
                     "type": "file",
