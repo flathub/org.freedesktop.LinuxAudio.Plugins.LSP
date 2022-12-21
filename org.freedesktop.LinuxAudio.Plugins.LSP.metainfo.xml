@@ -61,6 +61,49 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2022-12-21" version="1.2.4">
+      <description>
+        <ul>
+          <li>Implemented Noise Generator plugin series.</li>
+          <li>Added 'Stretch' and 'Compensate' functions to the
+          sampler plugin (contributed by Vitalius Kuchalskis).</li>
+          <li>Added support of 'Loop' feature by the Sampler plugin
+          series.</li>
+          <li>Added audio sample preview feature in the file open
+          dialog for Sampler, Trigger, Impulse Responses and Impulse
+          Reverb plugin series.</li>
+          <li>Extended LSPC (LSP Chunk) file format to support
+          additional types of chunks.</li>
+          <li>Added possibility to export Sampler configuration as a
+          single bundle with the configuration and audio files
+          packaged together into the LSPC file format.</li>
+          <li>Fixed broken configuration save and load operations with
+          relative file paths.</li>
+          <li>Added 'Min' and 'Max' sidechain sources for single-band
+          and multiband dynamic processing plugins: Compressor,
+          Dynamic Processor, Expander, Gate.</li>
+          <li>Added possibility to add several filters by performing
+          mouse double click on the graph area for the Parametric
+          Equalizer plugin series.</li>
+          <li>Added several built-in presets for the Parametric
+          Equalizer plugin series (contributed by Largos @
+          linuxmusicians).</li>
+          <li>Fixed performance regression of the UI.</li>
+          <li>Significant optimizations of CPU consumption by the
+          dspu::Limiter module.</li>
+          <li>Introduced tab control for the lsp-tk lib and
+          lsp-plugin-fw.</li>
+          <li>Raised the maximum supported sample rate from 192 kHz to
+          384 kHz.</li>
+          <li>Several bug fixes in lsp-dsp-units library.</li>
+          <li>Several bug fixes in lsp-runtime-lib library.</li>
+          <li>Several bug fixes in lsp-plugin-fw library.</li>
+          <li>Several bug fixes in lsp-tk-lib library.</li>
+          <li>Fixed 32-bit ARM architecture detection under 64-bit CPU
+          in makefiles.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2022-09-07" version="1.2.3" />
     <release date="2022-06-22" version="1.2.2">
       <description>
