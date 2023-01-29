@@ -26,7 +26,7 @@
                 "config",
                 "INCLUDE=-I/app/extensions/Plugins/LSP/include",
                 "PREFIX=/app/extensions/Plugins/LSP",
-                "FEATURES=vst2 ladspa lv2"
+                "FEATURES=vst2 ladspa lv2 clap"
             ],
             "post-install": [
                 "strip ${FLATPAK_DEST}/lib/ladspa/*.so",
@@ -34,8 +34,10 @@
                 "mv ${FLATPAK_DEST}/lib/lv2/lsp-*.lv2 ${FLATPAK_DEST}/lv2/",
                 "strip ${FLATPAK_DEST}/lv2/*.lv2/*.so",
                 "strip ${FLATPAK_DEST}/lib/vst/*/*.so",
+                "strip ${FLATPAK_DEST}/lib/clap/*.clap",
                 "ln -sf lib/ladspa ${FLATPAK_DEST}/ladspa",
                 "ln -sf lib/vst ${FLATPAK_DEST}/vst",
+                "ln -sf lib/clap ${FLATPAK_DEST}/clap",
                 "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.LSP.metainfo.xml",
                 "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.LSP --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.LinuxAudio.Plugins.LSP",
                 "install -Dm644 -t $FLATPAK_DEST/share/licenses/lsp COPYING COPYING.LESSER"
@@ -43,8 +45,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.4/lsp-plugins-src-1.2.4.tar.gz",
-                    "sha256": "193adc532d746cdf578f623bbae1b23fcd9ce8d5699d06d74c8f391f6df5cb2a"
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.5/lsp-plugins-src-1.2.5.tar.gz",
+                    "sha256": "618aedf856e963b884ba2d1ac3809ef78056d521c3934387f20152ce45b67e4c"
                 },
                 {
                     "type": "file",
