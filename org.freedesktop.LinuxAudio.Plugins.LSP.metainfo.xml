@@ -3,10 +3,11 @@
   <id>org.freedesktop.LinuxAudio.Plugins.LSP</id>
   <extends>org.freedesktop.LinuxAudio.BaseExtension</extends>
   <name>LSP</name>
-  <summary>Linux Studio Plugins LADSPA/LV2/VST</summary>
+  <summary>Linux Studio Plugins LADSPA/LV2/VST/CLAP</summary>
   <description>
-    <p>Linux Studio Plugins include the following plugins in LADSPA, LV2 and VST
-    with mono (M), stereo (S), left-right (LR) and mid-side (MS) variants:</p>
+    <p>Linux Studio Plugins include the following plugins in LADSPA,
+    LV2, VST and CLAP with mono (M), stereo (S), left-right (LR) and
+    mid-side (MS) variants:</p>
     <ul>
       <li>Limiter M / S</li>
       <li>Dynamic processor LR / MS / M / S</li>
@@ -61,6 +62,39 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2023-01-28" version="1.2.5">
+      <description>
+        <ul>
+          <li>Introduced CLAP plugin format support.</li>
+          <li>Introduced the 'Override Hydrogen drumkit' feature for
+          Multisampler plugin series.</li>
+          <li>Reworked and simplified the behaviour of the parameters
+          that define 'Stretch' and 'Loop' ranges.</li>
+          <li>Minimum and maximum values now depend on the sample
+          length for several parameters like 'Stretch', 'Loop', 'Fade
+          in' and 'Fade out' in the Sampler and Multisampler plugin
+          series.</li>
+          <li>Fixed the application menu spam in GNOME environment by reworking the XDG files
+          (contributed by sdwolfz).</li>
+          <li>Changed VST parameter normalized value mapping for
+          logarithmic parameters.</li>
+          <li>Added possibility to specify JACK connections that
+          should be estimated by the standalone JACK plugin when the
+          plugin connects to the JACK server.</li>
+          <li>Implemented plugin metadata validator which runs at the
+          build stage and verifies the consistency of the plugin
+          metadata.</li>
+          <li>Fixed bug related to modification of cyclic parameters
+          for several plugin formats.</li>
+          <li>Fixed possible crash when importing configuration data
+          from clipboard.</li>
+          <li>Added possibility to enable/disable Knob's scale
+          actions.</li>
+          <li>Several bugfixes related to the memory access in the
+          lsp-ws-lib.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2022-12-21" version="1.2.4">
       <description>
         <ul>
