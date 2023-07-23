@@ -39,14 +39,14 @@
                 "ln -sf lib/vst ${FLATPAK_DEST}/vst",
                 "ln -sf lib/clap ${FLATPAK_DEST}/clap",
                 "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.LSP.metainfo.xml",
-                "appstream-compose --basename=org.freedesktop.LinuxAudio.Plugins.LSP --prefix=${FLATPAK_DEST} --origin=flatpak org.freedesktop.LinuxAudio.Plugins.LSP",
+                "appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}",
                 "install -Dm644 -t $FLATPAK_DEST/share/licenses/lsp COPYING COPYING.LESSER"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.7/lsp-plugins-src-1.2.7.tar.gz",
-                    "sha256": "502c8f3867daf2d553673139ca7bff3afd0bf90e928c0008c1bde35fc5ffc743"
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.8/lsp-plugins-src-1.2.8.tar.gz",
+                    "sha256": "b9d558c91eab0ce0802a0829bd8e7c8e3a682e607ac178a2bef77363296413d7"
                 },
                 {
                     "type": "file",

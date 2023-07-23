@@ -13,7 +13,10 @@
       <li>Dynamic processor LR / MS / M / S</li>
       <li>Expander LR / MS / M / S</li>
       <li>Crossover x8 LR / MS / M / S</li>
+      <li>Filter M / S</li>
+      <li>Flanger M / S</li>
       <li>Gate LR / MS / M / S</li>
+      <li>GOTT Compressor LR / MS / M / S</li>
       <li>Graphic Equalizer x16 and x32 LR / MS / M / S</li>
       <li>Impulse Response M / S</li>
       <li>Impulse Reverb M / S</li>
@@ -23,7 +26,8 @@
       <li>Latency Meter</li>
       <li>Multiband expander x8 LR / MS / M / S</li>
       <li>Multiband gate x8 LR / MS / M / S</li>
-      <li>Multiband cmpressor x8 LR / MS / M / S</li>
+      <li>Multiband compressor x8 LR / MS / M / S</li>
+      <li>Multiband limiter M / S</li>
       <li>Oscillator Mono</li>
       <li>Oscilloscope x1, x2 and x4.</li>
       <li>Parametric Equalizer x16 LR / MS / M / S</li>
@@ -63,6 +67,44 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2023-07-20" version="1.2.8">
+      <description>
+        <ul>
+          <li>Implemented GOTT (Grand Over-The-Top) Compressor plugin
+          series.</li>
+          <li>Implemented Filter plugin series.</li>
+          <li>Implemented Flanger plugin series.</li>
+          <li>Implemented Multiband Limiter plugin series.</li>
+          <li>Implemented high-precision oversampling algorithms for
+          Oscilloscope plugin series.</li>
+          <li>Updated default values for file selectors in Impulse
+          Responses and Impulse Reverb plugin series.</li>
+          <li>Added generation of explicit element definitions for LV2
+          groups in TTL files as a workaround to LV2 problem related
+          to missing predefined port groups' elements.</li>
+          <li>Added 'All' channel selector to Sampler and Multisampler
+          plugin series which is now the default value for channel
+          selector.</li>
+          <li>Added missing audio preview for single-channel Sampler
+          Plugin series.</li>
+          <li>Adding missing output balance knobs in Impulse Reverb
+          Mono plugin.</li>
+          <li>Fixed improper behaviour of the bypass switch for
+          Multiband Compressor, Expander and Dynamics Processor plugin
+          series.</li>
+          <li>Fixed bug in the font manager which could yield memory
+          corrption after complete font manager cleanup (reproducible
+          when switching visual schemas).</li>
+          <li>Fixed memory leakage in the UI (not freed resources on
+          UI close).</li>
+          <li>Fixed bug in ALR function for Limiter plugin series
+          which could cause random audio scratches.</li>
+          <li>Fixed gain jumping bug in A/B tester plugin.</li>
+          <li>Several bugfixes in the core DSP modules provided by the
+          lsp-dsp-units library.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2023-05-21" version="1.2.7">
       <description>
         <ul>
