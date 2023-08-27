@@ -13,10 +13,10 @@
       <li>Dynamic processor LR / MS / M / S</li>
       <li>Expander LR / MS / M / S</li>
       <li>Crossover x8 LR / MS / M / S</li>
-      <li>Filter M / S</li>
-      <li>Flanger M / S</li>
+      <li>Filter M / S (NEW in 1.2.8)</li>
+      <li>Flanger M / S (NEW in 1.2.8)</li>
       <li>Gate LR / MS / M / S</li>
-      <li>GOTT Compressor LR / MS / M / S</li>
+      <li>GOTT Compressor LR / MS / M / S (NEW in 1.2.8)</li>
       <li>Graphic Equalizer x16 and x32 LR / MS / M / S</li>
       <li>Impulse Response M / S</li>
       <li>Impulse Reverb M / S</li>
@@ -27,7 +27,7 @@
       <li>Multiband expander x8 LR / MS / M / S</li>
       <li>Multiband gate x8 LR / MS / M / S</li>
       <li>Multiband compressor x8 LR / MS / M / S</li>
-      <li>Multiband limiter M / S</li>
+      <li>Multiband limiter M / S (NEW in 1.2.8)</li>
       <li>Oscillator Mono</li>
       <li>Oscilloscope x1, x2 and x4.</li>
       <li>Parametric Equalizer x16 LR / MS / M / S</li>
@@ -60,6 +60,7 @@
       <li>Loudness Compensator M / S (NEW in 1.1.24)</li>
       <li>Surge Filter M / S (NEW in 1.1.24)</li>
       <li>Mixer M / S (NEW in 1.2.6)</li>
+      <li>Beat Breather (NEW in 1.2.10)</li>
     </ul>
   </description>
   <url type="homepage">https://lsp-plug.in/</url>
@@ -67,6 +68,48 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2023-08-21" version="1.2.10">
+      <description>
+        <ul>
+          <li>Implemented Beat Breather plugin series.</li>
+          <li>Added phase switches to Delay Compensator plugin
+          series.</li>
+          <li>Implemented Stereo Split mode for stereo version of all
+          dynamic plugins:</li>
+          <ul>
+            <li>Compressor and Multiband Compressor;</li>
+            <li>Dynamics Processor and Multiband Dynamics
+            Processor;</li>
+            <li>Expander and Multiband Expander;</li>
+            <li>Gate and Multiband Gate;</li>
+            <li>GOTT Compressor.</li>
+          </ul>
+          <li>Added Allpass filter to the Filter plugin series.</li>
+          <li>Added Bandpass, Ladder-pass and Ladder-rej filters to
+          Parametric Equalizer plugin series.</li>
+          <li>Introduced Linear Phase mode for the Crossover plugin
+          series.</li>
+          <li>Introduced Linear Phase mode for multiband plugin
+          series:</li>
+          <ul>
+            <li>GOTT Compressor;</li>
+            <li>Multiband Compressor;</li>
+            <li>Multiband Dynamics Processor;</li>
+            <li>Multiband Expander;</li>
+            <li>Multiband Gate;</li>
+            <li>Multiband Limiter.</li>
+          </ul>
+          <li>Fixed missing inline display for Phase Detector
+          plugin.</li>
+          <li>Fixed invalid input signal level metering for Flanger
+          plugin series.</li>
+          <li>Fixed frequency inspection bug for LeftRight and MidSide
+          versions of Parametric Equalizer plugin series.</li>
+          <li>Fixed improper latency value report by Multiband Limiter
+          plugin series.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2023-07-20" version="1.2.8">
       <description>
         <ul>
