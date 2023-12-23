@@ -12,6 +12,7 @@
       <li>Limiter M / S</li>
       <li>Dynamic processor LR / MS / M / S</li>
       <li>Expander LR / MS / M / S</li>
+      <li>Clipper (NEW in 1.2.14)</li>
       <li>Crossover x8 LR / MS / M / S</li>
       <li>Filter M / S (NEW in 1.2.8)</li>
       <li>Flanger M / S (NEW in 1.2.8)</li>
@@ -26,10 +27,12 @@
       <li>Latency Meter</li>
       <li>Multiband expander x8 LR / MS / M / S</li>
       <li>Multiband gate x8 LR / MS / M / S</li>
+      <li>Multiband clipper (NEW in 1.2.14)</li>
       <li>Multiband compressor x8 LR / MS / M / S</li>
       <li>Multiband limiter M / S (NEW in 1.2.8)</li>
       <li>Oscillator Mono</li>
       <li>Oscilloscope x1, x2 and x4.</li>
+      <li>Parametric Equalizer x8 LR / MS / M / S (NEW in 1.2.14)</li>
       <li>Parametric Equalizer x16 LR / MS / M / S</li>
       <li>Parametric Equalizer x32 LR / MS / M / S</li>
       <li>Phase detector</li>
@@ -68,6 +71,69 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2023-12-23" version="1.2.14">
+      <description>
+        <ul>
+         <li>Implemented Clipper plugins series.</li>
+         <li>Implemented Multiband Clipper plugin series.</li>
+         <li>Implemented Parametric Equalizer x8 plugin series.</li>
+         <li>Updated VST 2.x plugin naming to fit the maximum possible
+         length of 31 characters.</li>
+         <li>Added tracking of maximum values option for Spectrum
+         Analyzer plugin series.</li>
+         <li>Added possibility to change frequency values by double
+         click for GOTT Compressor.</li>
+         <li>Improved performance of expression language in the
+         UI.</li>
+         <li>Implemented separate input and output signal spectrum
+         analysis for Filter, Graphic Equalizer and Parametric
+         Equalizer plugin series.</li>
+         <li>Updated default value and extended range of the zoom
+         fader for Filter, Graphic Equalizer and Parametric Equalizer
+         plugin series.</li>
+         <li>Added possibility to globally adjust filter point size
+         for Filter, Graphic Equalizer and Parametric Equalizer plugin
+         series.</li>
+         <li>Added gain level display for filter info of the
+         Parametric Equalizer and Filter plugin series.</li>
+         <li>Added missing inline display to the Autogain plugin
+         series.</li>
+         <li>Threshold markers are now editable for all dynamics and
+         multiband dynamics plugins.</li>
+         <li>Implemented switch that controls automatic scaling of
+         spectrum graph for plugin series:
+         <ul>
+           <li>Beat Breaher.</li>
+           <li>Filter.</li>
+           <li>GOTT Compressor.</li>
+           <li>Graphic Equalizer.</li>
+           <li>Multiband Compressor.</li>
+           <li>Multiband Dynamic Processor.</li>
+           <li>Multiband Gate.</li>
+           <li>Multiband Expander.</li>
+           <li>Multiband Limiter.</li>
+           <li>Noise Generator.</li>
+           <li>Parametric Equalizer.</li>
+         </ul>
+         </li>
+         <li>Many code updates that could cause potential problems
+         related to using another decimal point for floating-point
+         number formatting.</li>
+         <li>Added frequency and note displaying for band splits for
+         all multiband plugin series.</li>
+         <li>Added support of storing current file type selection in
+         file dialogs of UI.</li>
+         <li>Optimization of compressor and gate functions using
+         AVX-512 instruction set.</li>
+         <li>Fixed bug in Mid/Side conversion functions for AArch64
+         architecture (contributed by marcan at GitHub).</li>
+         <li>Introduced SIMD-optimized expander curve and gain
+         functions.</li>
+         <li>Improved performance of logarithmic values calculations
+         for DSP modules.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2023-10-29" version="1.2.13">
       <description>
         <ul>
