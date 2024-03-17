@@ -5,7 +5,6 @@
     "runtime-version": "stable",
     "sdk": "org.freedesktop.Sdk//23.08",
     "build-extension": true,
-    "appstream-compose": false,
     "build-options": {
         "prepend-pkg-config-path": "/app/extensions/Plugins/LSP/lib/pkgconfig",
         "prefix": "/app/extensions/Plugins/LSP"
@@ -24,9 +23,11 @@
             "no-autogen": true,
             "make-args": [
                 "config",
+                "CC=gcc",
+                "CXX=g++",
                 "INCLUDE=-I/app/extensions/Plugins/LSP/include",
                 "PREFIX=/app/extensions/Plugins/LSP",
-                "FEATURES=vst2 ladspa lv2 clap"
+                "FEATURES=vst2 vst3 ladspa lv2 clap"
             ],
             "post-install": [
                 "strip ${FLATPAK_DEST}/lib/ladspa/*.so",
@@ -34,19 +35,20 @@
                 "mv ${FLATPAK_DEST}/lib/lv2/lsp-*.lv2 ${FLATPAK_DEST}/lv2/",
                 "strip ${FLATPAK_DEST}/lv2/*.lv2/*.so",
                 "strip ${FLATPAK_DEST}/lib/vst/*/*.so",
+                "strip ${FLATPAK_DEST}/lib/vst3/*.vst3/Contents/*-linux/*.so",
                 "strip ${FLATPAK_DEST}/lib/clap/*.clap",
                 "ln -sf lib/ladspa ${FLATPAK_DEST}/ladspa",
                 "ln -sf lib/vst ${FLATPAK_DEST}/vst",
                 "ln -sf lib/clap ${FLATPAK_DEST}/clap",
+                "ln -sf lib/vst3 ${FLATPAK_DEST}/vst3",
                 "install -Dm644 --target-directory=${FLATPAK_DEST}/share/metainfo org.freedesktop.LinuxAudio.Plugins.LSP.metainfo.xml",
-                "appstream-compose --basename=${FLATPAK_ID} --prefix=${FLATPAK_DEST} --origin=flatpak ${FLATPAK_ID}",
                 "install -Dm644 -t $FLATPAK_DEST/share/licenses/lsp COPYING COPYING.LESSER"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.14/lsp-plugins-src-1.2.14.tar.gz",
-                    "sha256": "1a3359ee8b8a82971bd7e9eeabe43f58ce6b4a4793d85fb16f97b100e4edee9a"
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.15/lsp-plugins-src-1.2.15.tar.gz",
+                    "sha256": "92b92efa31463af2f08b134677ed2307313fd7b93f394d3301e3cb867c5df3ae"
                 },
                 {
                     "type": "file",

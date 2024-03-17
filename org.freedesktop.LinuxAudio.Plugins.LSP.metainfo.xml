@@ -3,10 +3,10 @@
   <id>org.freedesktop.LinuxAudio.Plugins.LSP</id>
   <extends>org.freedesktop.LinuxAudio.BaseExtension</extends>
   <name>LSP</name>
-  <summary>Linux Studio Plugins LADSPA/LV2/VST/CLAP</summary>
+  <summary>Linux Studio Plugins LADSPA/LV2/VST/VST3/CLAP</summary>
   <description>
     <p>Linux Studio Plugins include the following plugins in LADSPA,
-    LV2, VST and CLAP with mono (M), stereo (S), left-right (LR) and
+    LV2, VST, VST3 and CLAP with mono (M), stereo (S), left-right (LR) and
     mid-side (MS) variants:</p>
     <ul>
       <li>Limiter M / S</li>
@@ -71,6 +71,55 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2024-03-05" version="1.2.15">
+      <description>
+        <ul>
+          <li>Added experimental VST3 plugin format support.</li>
+          <li>Added built-in presets for Compressor plugin series.</li>
+          <li>Fixed bug in smoothing mode of Parametric Equalizer and
+          Filter plugins that could be caused when using large buffer
+          sizes. Additional optimizations to reduce CPU resources when
+          processing in smoothing mode.</li>
+          <li>Updated behaviour of band frequency splits in the UI for
+          Multiband Compressor, Multiband Expander, Multiband Gate
+          Multiband Dynamic Processor and Crossover plugin
+          series.</li>
+          <li>Several bugfixes and improvements in implementations of
+          VST2, LV2 and CLAP formats.</li>
+          <li>Added possibility to manually enter channel name in
+          Mixer plugin series.</li>
+          <li>Added MIDI velocity control code display in Sampler and
+          Multisampler plugin series.</li>
+          <li>Added support of LR2 (12 dB/oct) filters by the
+          Crossover plugins series.</li>
+          <li>Added S/M Apply switch to Crossover plugin series that
+          applies effect of Solo/Mute buttons to corresponding
+          frequency band's outputs.</li>
+          <li>Improved grid color and visibility for the Spectrum
+          analyzer plugin series in Spectralizer mode.</li>
+          <li>Implemented Hold option for Compressor, Dynamics
+          Processor, Expander and Gate plugin series.</li>
+          <li>Implemented Hold option for Multiband Compressor,
+          Dynamics Processor, Expander and Gate plugin series.</li>
+          <li>Added Dry/Wet balance control for Compressor, Dynamics
+          Processor, Expander, Gate and Trigger plugin series.</li>
+          <li>Added Dry/Wet balance control for Multiband Compressor,
+          Dynamics Processor, Expander, Gate and GOTT Compressor
+          plugin series.</li>
+          <li>Fixed phasing issue between dry and wet signal for GOTT
+          Compressor in Linear Phase mode.</li>
+          <li>Fixed invalid curve markers display in Multiband Gate
+          plugin series.</li>
+          <li>Re-implemented allpass filters for Equalizer that could
+          yield to high frequency pitch buildup.</li>
+          <li>Updated split editing behaviour for Multiband plugin
+          series and Crossover plugin series.</li>
+          <li>Added basic UI design guidelines to the
+          documentation.</li>
+          <li>Several bugfixes in graphic toolkit library.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2023-12-23" version="1.2.14">
       <description>
         <ul>
@@ -101,21 +150,18 @@
          <li>Threshold markers are now editable for all dynamics and
          multiband dynamics plugins.</li>
          <li>Implemented switch that controls automatic scaling of
-         spectrum graph for plugin series:
-         <ul>
-           <li>Beat Breaher.</li>
-           <li>Filter.</li>
-           <li>GOTT Compressor.</li>
-           <li>Graphic Equalizer.</li>
-           <li>Multiband Compressor.</li>
-           <li>Multiband Dynamic Processor.</li>
-           <li>Multiband Gate.</li>
-           <li>Multiband Expander.</li>
-           <li>Multiband Limiter.</li>
-           <li>Noise Generator.</li>
-           <li>Parametric Equalizer.</li>
-         </ul>
-         </li>
+         spectrum graph for plugin series:</li>
+         <li>- Beat Breaher.</li>
+         <li>- Filter.</li>
+         <li>- GOTT Compressor.</li>
+         <li>- Graphic Equalizer.</li>
+         <li>- Multiband Compressor.</li>
+         <li>- Multiband Dynamic Processor.</li>
+         <li>- Multiband Gate.</li>
+         <li>- Multiband Expander.</li>
+         <li>- Multiband Limiter.</li>
+         <li>- Noise Generator.</li>
+         <li>- Parametric Equalizer.</li>
          <li>Many code updates that could cause potential problems
          related to using another decimal point for floating-point
          number formatting.</li>
@@ -630,14 +676,11 @@
       <description>
         <p>New release of LSP Plugins is available with the following changes:</p>
         <ul>
-          <li><b>Implemented Loudness Compensator plugin series (Mono and Stereo).</b></li>
-          <li><b>Implemented Surge Filter plugin series (Mono and Stereo) for protecting audio chain from possible pops on playback start/stop events.</b></li>
-          <li>Significant changes the Limiter Plugin series, may be partially incompatible with hosts/wrappers:
-          <ul>
-            <li>Removed 'Classic' and 'Mixed' modes since these modes do not give effective results.</li>
-            <li>Introduced Automatic Level Regulation (ALR) feature enabled by default.</li>
-          </ul>
-          </li>
+          <li>Implemented Loudness Compensator plugin series (Mono and Stereo).</li>
+          <li>Implemented Surge Filter plugin series (Mono and Stereo) for protecting audio chain from possible pops on playback start/stop events.</li>
+          <li>Significant changes the Limiter Plugin series, may be partially incompatible with hosts/wrappers:</li>
+          <li>- Removed 'Classic' and 'Mixed' modes since these modes do not give effective results.</li>
+          <li>- Introduced Automatic Level Regulation (ALR) feature enabled by default.</li>
           <li>Added possibility to dump internal state of plugin to file.</li>
           <li>Several plugins now support dumping of internal state.</li>
           <li>Added support of loading Hydrogen drumkits by the Multisampler plugin series.</li>
