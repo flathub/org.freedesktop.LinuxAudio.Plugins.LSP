@@ -47,8 +47,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.22/lsp-plugins-src-1.2.22.tar.gz",
-                    "sha256": "bb97270482b04c1269643a8373b554255dde287b1c5ddbc567ac94de4815a75b"
+                    "url": "https://github.com/sadko4u/lsp-plugins/releases/download/1.2.23/lsp-plugins-src-1.2.23.tar.gz",
+                    "sha256": "1b18d29c3b043e25db689f64852be041979538dc567f85898a5bab1e949fd78c"
                 },
                 {
                     "type": "file",

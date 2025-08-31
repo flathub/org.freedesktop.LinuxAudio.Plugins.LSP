@@ -72,6 +72,9 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2025-08-26" version="1.2.23">
+      <url>https://github.com/lsp-plugins/lsp-plugins/releases/tag/1.2.23</url>
+    </release>
     <release date="2025-05-19" version="1.2.22">
       <url>https://github.com/lsp-plugins/lsp-plugins/releases/tag/1.2.22</url>
     </release>
