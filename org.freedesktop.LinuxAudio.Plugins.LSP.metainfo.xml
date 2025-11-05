@@ -30,6 +30,7 @@
       <li>Multiband clipper (NEW in 1.2.14)</li>
       <li>Multiband compressor x8 LR / MS / M / S</li>
       <li>Multiband limiter M / S (NEW in 1.2.8)</li>
+      <li>Multiband Ring-Modulated sidechain (NEW in 1.2.24)</li>
       <li>Oscillator Mono</li>
       <li>Oscilloscope x1, x2 and x4.</li>
       <li>Parametric Equalizer x8 LR / MS / M / S (NEW in 1.2.14)</li>
@@ -37,6 +38,7 @@
       <li>Parametric Equalizer x32 LR / MS / M / S</li>
       <li>Phase detector</li>
       <li>Profiler M / S</li>
+      <li>Ring-Modulated sidechain (NEW in 1.2.24)</li>
       <li>Room builder M / S</li>
       <li>Multi-sampler x12 Direct out / stereo</li>
       <li>Multi-sampler x24 Direct out / stereo</li>
@@ -72,6 +74,56 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2025-11-03" version="1.2.25">
+      <url>https://github.com/lsp-plugins/lsp-plugins/releases/tag/1.2.25</url>
+      <description>
+        <ul>
+          <li>Improved plugin metadata validation tool in plugin
+          framework.</li>
+          <li>VST3 data synchronization between DSP and UI is now
+          performed in the UI thread if possible.</li>
+          <li>Fixed VST3 crash on JUCE-based hosts related to improper
+          IRunLoop handling.</li>
+          <li>Fixed Room Builder plugin that could not render impulse
+          responses for some built-in rooms.</li>
+          <li>Fixed possible SIGFPE crash on LADSPA descriptor
+          generation related to division by zero error.</li>
+          <li>Fixed data transport for LV2 plugins that caused many
+          annoying log messages in Ardour.</li>
+        </ul>
+      </description>
+    </release>
+    <release date="2025-10-25" version="1.2.24">
+      <url>https://github.com/lsp-plugins/lsp-plugins/releases/tag/1.2.24</url>
+      <description>
+        <ul>
+          <li>Implemented Ring-Modulated sidechain plugin series.</li>
+          <li>Implemented Multiband Ring-Modulated sidechain plugin
+          series.</li>
+          <li>Implemented A/B preset switching support by
+          plugins.</li>
+          <li>Added support of integrated loudness metering for
+          Referencer plugin series.</li>
+          <li>Added True Peak limiting modes to the Limiter and
+          Multiband Limiter plugin series.</li>
+          <li>Added Piano keyboard layout to all plugins that provide
+          frequency graph.</li>
+          <li>Added support of BeginEdit and EndEdit events for CLAP,
+          LV2, VST2 and VST3 formats.</li>
+          <li>Moved Dry, Wet and Dry/Wet knobs into a separate Mix
+          overlay for Trigger plugin series.</li>
+          <li>Fixed frequency range display for Multiband Compressor,
+          Expander, Gate and Dynamics Processor plugin series.</li>
+          <li>Fixed regressions in LV2 plugin wrapper related to
+          setting path parameters.</li>
+          <li>Fixed crash when loading project with Loudness
+          Compensator plugin in IIR mode.</li>
+          <li>Fixed VST3 plugins crash under Ardour related to
+          improper IRunLoop interface operations based on invalid API
+          calls by the DAW.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-08-26" version="1.2.23">
       <url>https://github.com/lsp-plugins/lsp-plugins/releases/tag/1.2.23</url>
     </release>
