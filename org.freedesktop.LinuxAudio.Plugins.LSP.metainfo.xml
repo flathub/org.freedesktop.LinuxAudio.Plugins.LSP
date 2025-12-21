@@ -25,6 +25,7 @@
       <li>Compressor LR / MS / M / S</li>
       <li>Artistic M / S</li>
       <li>Latency Meter</li>
+      <li>Matcher (NEW in 1.2.26)</li>
       <li>Multiband expander x8 LR / MS / M / S</li>
       <li>Multiband gate x8 LR / MS / M / S</li>
       <li>Multiband clipper (NEW in 1.2.14)</li>
@@ -74,6 +75,37 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2025-12-21" version="1.2.26">
+      <description>
+        <ul>
+          <li>Implemented Matcher plugin series.</li>
+          <li>Implemented metadata revisioning to not to corrupt
+          parameter automation in DAWs like Ardour related to changing
+          port indices when some new parameter is added.</li>
+          <li>Added possibility to select between host-friendly and
+          user-frienfly values when exporting configuration to the
+          file.</li>
+          <li>Added 'smooth' parameter in Limiter and Multiband
+          Limiter plugins that allows to adjust the smoothnes of the
+          ALR knee.</li>
+          <li>Optimized spectrum analyzer module: reduced memory usage
+          and memory copying.</li>
+          <li>Some optimizations related to plugin port mappings in
+          the UI.</li>
+          <li>Removed duplicate and not working filter point thickness
+          settings in UI behavior menu.</li>
+          <li>Fixed out-of sync ALR attack and release timings for the
+          Limiter module when changing the sample rate.</li>
+          <li>Fixed moduleinfo.json generation and validation for
+          VST3.</li>
+          <li>Fixed possible garbage at the end of KVT BLOB
+          serialization.</li>
+          <li>Fixed endianess-related bugs in VST3 headers.</li>
+          <li>Fixed some bugs in VST3 plugin state
+          deserialization.</li>
+        </ul>
+      </description>
+    </release>
     <release date="2025-11-03" version="1.2.25">
       <url>https://github.com/lsp-plugins/lsp-plugins/releases/tag/1.2.25</url>
       <description>
