@@ -68,6 +68,7 @@
       <li>Mixer M / S (NEW in 1.2.6)</li>
       <li>Beat Breather (NEW in 1.2.10)</li>
       <li>Chorus (NEW in 1.2.16)</li>
+      <li>Deeser (NEW in 1.2.34)</li>
     </ul>
   </description>
   <developer id="io.github.sadko4u">
@@ -79,6 +80,56 @@
   <metadata_license>CC0-1.0</metadata_license>
   <update_contact>hub_AT_figuiere.net</update_contact>
   <releases>
+    <release date="2026-08-15" version="1.2.34">
+      <description>
+        <ul>
+          <li>Implemented Deesser Plugin series.</li>
+          <li>VST2 plugins now are packaged into shell plugin which
+          makes faster scanning of plugins and requires less shared
+          object files to provide.</li>
+          <li>Significant refactoring of static and dynamic filter
+          functions, eliminated some bugs in mathematics for ARM32 and
+          AArch64 archtectures that were hard to catch.</li>
+          <li>Added support of biquad filter cascades that contain 16
+          filters at one time, optimized filter cascades for AVX-512
+          support.</li>
+          <li>Added hard clipping of the input signal to the maximum
+          peak value of 120 dBFS to avoid mathematic failures which
+          may yield to NaN and Inf values.</li>
+          <li>Added delayed display of the 'Loading' status for the
+          AudioSample widget to avoid flickering of the sample widget
+          when quickly navigating samples on the sample navigation
+          panel.</li>
+          <li>Added possibility to select audio driver by clicking
+          current Audio driver's name at the bottom-right part of the
+          window.</li>
+          <li>The Input Gain knob now controls the gain of input
+          signal only and does not affect the level of external
+          sidechain or shared memory link for the list of following
+          plugins: Multiband Compressor; Multiband Dynamics Processor;
+          Multiband Expander; Multiband Gate; Multiband Limiter;
+          Multiband Ring-Modulated Sidechain.</li>
+          <li>Fixed regression in filter transfer function calculation
+          functions that could yield to improper display of filter
+          characteristics for the highest frequency band on some
+          crossovers.</li>
+          <li>Fixed regression that caused a crash when launching
+          standalone plugins in headless mode.</li>
+          <li>Fixed out of sync parameters for the ctl::Envelope
+          controller which fixes behaviour of audio envelope in
+          Sampler plugin series.</li>
+          <li>Bugfixes in PipeWire driver: fixed registry
+          synchronization code that could yield to hangup or
+          crashes.</li>
+          <li>Fixed VST3 paths for 32-bit and 64-bit ARM
+          architectures.</li>
+          <li>Fixed bug related to failures of saving global
+          configuration file when user's configuration directory of
+          LSP Plugins does not exist (for example, on first
+          installation).</li>
+        </ul>
+      </description>
+    </release>
     <release date="2026-06-13" version="1.2.33" />
     <release date="2026-06-13" version="1.2.31">
       <description>
